@@ -1,0 +1,15 @@
+{
+    "name": "dnsdaddy-root",
+    "version": "1.0.0",
+    "description": "Root for DNS Daddy",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "server": "cd server && npm start",
+        "client": "cd client && npm run dev",
+        "install:all": "npm install && npm install --prefix server && npm install --prefix client"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
